@@ -15,11 +15,11 @@
 # Inherit common language setup
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Inherit tf700t vendor setup
-$(call inherit-product-if-exists, vendor/asus/tf700t/tf700t-vendor.mk)
+# Inherit tf300t vendor setup
+$(call inherit-product-if-exists, vendor/asus/tf300t/tf300t-vendor.mk)
 
 # Path to overlay files
-DEVICE_PACKAGE_OVERLAYS += device/asus/tf700t/overlay
+DEVICE_PACKAGE_OVERLAYS += device/asus/tf300t/overlay
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab \
@@ -78,9 +78,9 @@ PRODUCT_COPY_FILES += \
 
 # Build characteristics setting 
 PRODUCT_CHARACTERISTICS := tablet
-PRODUCT_AAPT_CONFIG := normal large xlarge hdpi
-PRODUCT_AAPT_PREF_CONFIG := xlarge hdpi
-
+PRODUCT_AAPT_CONFIG := normal large xlarge hdpi mdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi mdpi
+ 
 # This device has enough space for precise dalvik
 PRODUCT_TAGS += dalvik.gc.type-precise
 
@@ -113,18 +113,18 @@ PRODUCT_PROPERTY_OVERRIDES := \
 
 # media files
 PRODUCT_COPY_FILES += \
-    device/asus/tf700t/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    device/asus/tf700t/configs/media_profiles.xml:system/etc/media_profiles.xml
+    device/asus/tf300t/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    device/asus/tf300t/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
-    device/asus/tf700t/configs/gps.conf:system/etc/gps.conf
+    device/asus/tf300t/configs/gps.conf:system/etc/gps.conf
 
 # Inherit tablet dalvik settings
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
 
 # Device Naming
-PRODUCT_NAME := full_tf700t
-PRODUCT_DEVICE := tf700t
+PRODUCT_NAME := full_tf300t
+PRODUCT_DEVICE := tf300t
 PRODUCT_BRAND := asus
-PRODUCT_MODEL := ASUS Transformer Pad TF700T
+PRODUCT_MODEL := ASUS Transformer Pad tf300t

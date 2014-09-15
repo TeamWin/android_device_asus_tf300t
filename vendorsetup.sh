@@ -14,5 +14,5 @@
 # limitations under the License.
 #
 
-add_lunch_combo omni_tf700t-userdebug
-add_lunch_combo omni_tf700t-eng
+add_lunch_combo omni_tf300t-userdebug
+add_lunch_combo omni_tf300t-eng

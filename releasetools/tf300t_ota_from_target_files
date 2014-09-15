@@ -82,7 +82,7 @@ except ImportError:
   from sha import sha as sha1
 
 import common
-import tf700t_edify_generator as edify_generator
+import tf300t_edify_generator as edify_generator
 
 OPTIONS = common.OPTIONS
 OPTIONS.package_key = None
@@ -99,7 +99,7 @@ OPTIONS.backuptool = False
 OPTIONS.override_device = 'auto'
 
 LOCAL_DIR = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
-DEV_OUT_DIR = os.path.abspath(os.path.join(LOCAL_DIR, '../../../out/target/product/tf700t/'))
+DEV_OUT_DIR = os.path.abspath(os.path.join(LOCAL_DIR, '../../../out/target/product/tf300t/'))
 
 def MostPopularKey(d, default):
   """Given a dict, return the key corresponding to the largest
