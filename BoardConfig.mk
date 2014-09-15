@@ -21,7 +21,7 @@ BOARD_USES_ALSA_AUDIO := false
 BOARD_USES_TINY_AUDIO_HW := false
 
 # inherit from the proprietary version
--include vendor/asus/tf700t/BoardConfigVendor.mk
+-include vendor/asus/tf300t/BoardConfigVendor.mk
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
@@ -48,7 +48,7 @@ BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE :=
 
 # EGL settings
-BOARD_EGL_CFG := device/asus/tf700t/configs/egl.cfg
+BOARD_EGL_CFG := device/asus/tf300t/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 
 # Misc display settings
@@ -58,8 +58,8 @@ BOARD_NO_ALLOW_DEQUEUE_CURRENT_BUFFER := true
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUEDROID_VENDOR_CONF := device/asus/tf700t/bluetooth/vnd_tf700t.txt
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/asus/tf700t/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/asus/tf300t/bluetooth/vnd_tf300t.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/asus/tf300t/bluetooth
 
 # Support for dock battery
 TARGET_HAS_DOCK_BATTERY := true
@@ -86,24 +86,24 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 
 # Build kernel from source
-#TARGET_KERNEL_SOURCE := kernel/asus/tf700t
-#TARGET_KERNEL_CONFIG := cyanogenmod_cardhu_defconfig
+#TARGET_KERNEL_SOURCE := kernel/grimlock/asus/tegra3/unified
+#TARGET_KERNEL_CONFIG := grimlock_tegra3_defconfig
 
 # Custom Tools
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/asus/tf700t/releasetools/tf700t_ota_from_target_files
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/asus/tf300t/releasetools/tf300t_ota_from_target_files
 
 # Recovery Options
-BOARD_CUSTOM_BOOTIMG_MK := device/asus/tf700t/recovery/recovery.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/asus/tf300t/recovery/recovery.mk
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
-TARGET_RECOVERY_INITRC := device/asus/tf700t/recovery/init.rc
+TARGET_RECOVERY_INITRC := device/asus/tf300t/recovery/init.rc
 BOARD_HAS_SDCARD_INTERNAL := true
-TARGET_RECOVERY_FSTAB := device/asus/tf700t/ramdisk/fstab.cardhu
+TARGET_RECOVERY_FSTAB := device/asus/tf300t/ramdisk/fstab.cardhu
 RECOVERY_FSTAB_VERSION := 2
 
 # SELINUX Defines
 #BOARD_SEPOLICY_DIRS := \
-#    device/asus/tf700t/selinux
+#    device/asus/tf300t/selinux
 
 #BOARD_SEPOLICY_UNION := \
 #    file_contexts \
@@ -111,11 +111,11 @@ RECOVERY_FSTAB_VERSION := 2
 #    device.te \
 #    domain.te
 
-BOARD_HARDWARE_CLASS := device/asus/tf700t/cmhw/
+BOARD_HARDWARE_CLASS := device/asus/tf300t/cmhw/
 
 #twrp
-BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
-DEVICE_RESOLUTION := 1920x1200
+BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_10x18.h\"
+DEVICE_RESOLUTION := 1280x800
 RECOVERY_SDCARD_ON_DATA := true
 BOARD_HAS_NO_REAL_SDCARD := true
 TW_NO_USB_STORAGE := true
@@ -132,6 +132,6 @@ TW_CRYPTO_MNT_POINT := "/data"
 TW_CRYPTO_FS_OPTIONS := "data=ordered,delalloc"
 TW_CRYPTO_FS_FLAGS := "0x00000406"
 TW_CRYPTO_KEY_LOC := "footer"
-TWRP_CUSTOM_KEYBOARD := ../../../device/asus/tf700t/recovery/hardwarekeyboard.cpp
+TWRP_CUSTOM_KEYBOARD := ../../../device/asus/tf300t/recovery/hardwarekeyboard.cpp
 TW_BRIGHTNESS_FILE := /sys/devices/platform/pwm-backlight/backlight/pwm-backlight/brightness
-TW_MAX_BRIGHTNESS := 255
+TW_MAX_BRIGHTNESS := 200

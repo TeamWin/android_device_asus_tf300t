@@ -15,8 +15,8 @@
 # Inherit full-base
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
-# Inherit from tf700t device
-$(call inherit-product, device/asus/tf700t/device_tf700t.mk)
+# Inherit from tf300t device
+$(call inherit-product, device/asus/tf300t/device_tf300t.mk)
 
 # This is where we'd set a backup provider if we had one
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
